@@ -14,8 +14,6 @@ export default function fetchImages(query, page) {
       return response.json();
     }
 
-    return Promise.reject(
-      new Error(`There are no images for your query: ${query}`),
-    );
+    return Promise.reject(new Error(`can't find ${query}. try smth else`));
   });
 }

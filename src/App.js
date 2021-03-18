@@ -55,7 +55,7 @@ class App extends Component {
       .then(data => {
         if (data.hits.length === 0) {
           this.setState({ status: Status.IDLE });
-          return toast.error('Unfortunately, there is nothing to show...');
+          return toast.error(`can't find. try again`);
         }
         this.setState(prevState => ({
           imageList: [...prevState.imageList, ...data.hits],
